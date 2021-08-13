@@ -1,9 +1,10 @@
 import * as React from "react"
+import ImagenHotel from "../components/ImagenHotel"
 import Layout from "../components/Layout"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Comenzamos con Gatsby</h1>
+    <ImagenHotel />
   </Layout>
 )
 

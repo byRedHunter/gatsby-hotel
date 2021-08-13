@@ -10,8 +10,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --color-dark: #2C2E43;
     --color-light: #e9e9e9;
-    --color-primary: #FFD523;
-    --color-gray: #595260;
+    --color-blue: rgb(34, 85, 140);
     --font-size: 1.6rem;
     --font-body: 'PT Sans', sans-serif;;
     --font-title: 'Roboto', sans-serif;;

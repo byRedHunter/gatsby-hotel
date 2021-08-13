@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Nav from "./Nav"
 
 const HeaderContainer = styled.header`
-  background: var(--color-gray);
+  background: var(--color-blue);
   padding: 1rem;
   div {
     max-width: 120rem;
@@ -15,7 +15,7 @@ const HeaderContainer = styled.header`
     }
   }
   h1 {
-    color: var(--color-primary);
+    color: var(--color-light);
     text-align: center;
   }
 `
