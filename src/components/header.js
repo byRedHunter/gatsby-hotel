@@ -1,42 +1,35 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from "react"
+import styled from "styled-components"
+import Nav from "./Nav"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const HeaderContainer = styled.header`
+  background: var(--color-gray);
+  padding: 1rem;
+  div {
+    max-width: 120rem;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  h1 {
+    color: var(--color-primary);
+    text-align: center;
+  }
+`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = () => {
+  return (
+    <HeaderContainer>
+      <div>
+        <h1>HotelGatsby</h1>
 
-Header.defaultProps = {
-  siteTitle: ``,
+        <Nav />
+      </div>
+    </HeaderContainer>
+  )
 }
 
 export default Header
