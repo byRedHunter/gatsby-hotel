@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Nav from "./Nav"
@@ -20,11 +21,18 @@ const HeaderContainer = styled.header`
   }
 `
 
+const EnlaceHome = styled(Link)`
+  color: var(--color-light);
+  text-decoration: none;
+`
+
 const Header = () => {
   return (
     <HeaderContainer>
       <div>
-        <h1>HotelGatsby</h1>
+        <EnlaceHome to="/">
+          <h1>HotelGatsby</h1>
+        </EnlaceHome>
 
         <Nav />
       </div>
