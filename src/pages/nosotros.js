@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
+import NosotrosContent from "../components/NosotrosContent"
 
 const Nosotros = () => {
   return (
     <Layout>
-      <h2>nosotros</h2>
+      <NosotrosContent />
     </Layout>
   )
 }

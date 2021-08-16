@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
 const ImageBackground = styled(BackgroundImage)`
-  height: 500px;
+  height: 400px;
 `
 
 const ImageContent = styled.div`
