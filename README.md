@@ -9,5 +9,5 @@
 </h1>
 <p>Proyecto realizado con Gatsby y DatoCMS</p>
 <h3>Preview</h3>
-<a href=''>Ver demo</a>
+<a href='https://hotelgatsby-rh.netlify.app/'>Ver demo</a>
 <img alt='HotelGatsby' src='https://repository-images.githubusercontent.com/395705804/c9f992ae-c5f9-4690-b9b9-d29fdb383dda' />
