@@ -2,6 +2,8 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import Header from "./Header"
 import { createGlobalStyle } from "styled-components"
+import Footer from "./Footer"
+import useSeo from "../hooks/useSeo"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -43,10 +45,19 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Layout = ({ children }) => {
+  const seo = useSeo()
+  const { globalSeo, faviconMetaTags } = seo
+  const {
+    fallbackSeo: { description, title },
+  } = globalSeo
+  const favicon = faviconMetaTags.tags[1].attributes.href
+
   return (
     <>
       <Helmet>
-        <title>Gatsby Hotel</title>
+        <link rel="icon" href={favicon} type="image/x-icon" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -61,6 +72,7 @@ const Layout = ({ children }) => {
 
       <Header />
       {children}
+      <Footer title={title} />
     </>
   )
 }
